@@ -118,7 +118,7 @@ After all the steps are complete the application will be ready for usage
 
 **Code** : `201 Created`
 
-## Ivalid  or expired JWT token
+## Ivalid or expired JWT token
 
 **Code** : `401 Unauthorized`
 

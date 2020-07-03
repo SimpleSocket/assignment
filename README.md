@@ -118,7 +118,7 @@ After all the steps are complete the application will be ready for usage
 
 **Code** : `201 Created`
 
-## Ivalid  or expired JWT token
+## Ivalid or expired JWT token
 
 **Code** : `401 Unauthorized`
 
@@ -152,7 +152,7 @@ After all the steps are complete the application will be ready for usage
   }
 ]
 ```
-## Ivalid  or expired JWT token
+## Ivalid or expired JWT token
 
 **Code** : `401 Unauthorized`
 
@@ -180,7 +180,7 @@ After all the steps are complete the application will be ready for usage
 
 **Code** : `200 Ok`
 
-## Ivalid  or expired JWT token
+## Ivalid or expired JWT token
 
 **Code** : `401 Unauthorized`
 
@@ -208,13 +208,9 @@ After all the steps are complete the application will be ready for usage
 
 **Code** : `200 Ok`
 
-## Ivalid  or expired JWT token
+## Ivalid or expired JWT token
 
 **Code** : `401 Unauthorized`
-
-## Blank tittle 
-
-**Code** : `400 Bad Request`
 
 ## Entry does not exist
 

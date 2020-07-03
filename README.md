@@ -111,7 +111,7 @@ After all the steps are complete the application will be ready for usage
 ```json
 {
     "tittle": "sample tittle",
-    "text": "sample password"
+    "text": "sample text"
 }
 ```
 ## Success Response

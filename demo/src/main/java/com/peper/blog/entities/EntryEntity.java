@@ -5,12 +5,12 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import java.util.Objects;
 
 @Entity
 @Table(name = "entry", schema = "blog", catalog = "")
 public class EntryEntity {
-    @NotBlank
     private String tittle;
     private String text;
     private Integer idEntry;
@@ -21,6 +21,7 @@ public class EntryEntity {
 
     @Basic
     @Column(name = "tittle", nullable = true, length = 255)
+    @NotEmpty
     public String getTittle() {
         return tittle;
     }

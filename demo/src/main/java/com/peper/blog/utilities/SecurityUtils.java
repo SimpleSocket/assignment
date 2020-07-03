@@ -21,5 +21,4 @@ public class SecurityUtils {
         return userDetailsExtended.getId();
     }
 
-
 }

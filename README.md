@@ -69,6 +69,9 @@ After all the steps are complete the application will be ready for usage
 
 **Code** : `400 Bad Request`
 
+## Registration with the same email
+
+**Code** : `409 Conflict`
 
 # Login
 

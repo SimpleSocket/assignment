@@ -65,8 +65,8 @@ email address and name information.
 
 ```json
 {
-    "email" : "sample@mail.com"
-    "password" : "samplePassword"
+    "email": "sample@mail.com",
+    "password": "samplePassword"
 }
 ```
 ### Login
@@ -91,7 +91,7 @@ email address and name information.
 
 ```json
 {
-    "email" : "sample@mail.com"
-    "password" : "samplePassword"
+    "email": "sample@mail.com",
+    "password": "samplePassword"
 }
 ```

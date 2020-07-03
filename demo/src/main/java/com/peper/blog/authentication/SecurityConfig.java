@@ -42,9 +42,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .disable()
                 .authorizeRequests().antMatchers("/login", "/register").permitAll().
-                        anyRequest().authenticated().and().
-                        sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                        anyRequest().authenticated()
+                .and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
         http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
         http.exceptionHandling().authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED));
@@ -55,8 +55,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return NoOpPasswordEncoder.getInstance();
     }
 
-    @Override
     @Bean
+    @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }

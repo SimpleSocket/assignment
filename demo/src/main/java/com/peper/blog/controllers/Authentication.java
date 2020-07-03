@@ -45,13 +45,13 @@ public class Authentication {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @PostMapping(value = "/login", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<AuthenticationResponse> login(@Valid @RequestBody AuthenticationRequest authenticationRequest) throws Exception{
+    @PostMapping(value = "/login", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<AuthenticationResponse> login(@Valid @RequestBody AuthenticationRequest authenticationRequest) throws BadCredentialsException{
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authenticationRequest.getEmail(),
                     authenticationRequest.getPassword()));
         }catch (BadCredentialsException e){
-            throw new Exception("bad creds :",  e);
+            throw new BadCredentialsException("bad credentials: ",  e);
         }
 
         UserDetailsExtended userDetails = userAuth.loadUserByUsername(authenticationRequest.getEmail());

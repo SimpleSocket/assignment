@@ -15,7 +15,7 @@ public class AuthenticationRequest {
 
     }
 
-    public AuthenticationRequest(@NotBlank String email, @NotBlank String password) {
+    public AuthenticationRequest(String email, String password) {
         this.email = email;
         this.password = password;
     }

@@ -46,8 +46,8 @@ public class BlogService {
     }
 
 
-    public Iterable<EntryEntity> getBlogEntries(int id){
-        return entryRepository.findAllByFkPersonidPerson(id);
+    public Iterable<EntryEntity> getBlogEntries(int personId){
+        return entryRepository.findAllByFkPersonidPerson(personId);
     }
 
     

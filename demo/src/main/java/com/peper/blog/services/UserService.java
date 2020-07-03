@@ -12,6 +12,10 @@ public class UserService {
     private PersonRepository personRepository;
 
     public boolean createPerson(PersonEntity personEntity){
+        if(personRepository.existsByEmail(personEntity.getEmail())){
+            return false;
+        }
+
         PersonEntity savedPerson = personRepository.save(personEntity);
         return savedPerson != null;
     }

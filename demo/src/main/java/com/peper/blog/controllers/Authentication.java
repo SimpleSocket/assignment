@@ -42,7 +42,7 @@ public class Authentication {
     @PostMapping(value = "/register", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE )
     public ResponseEntity createUser(@Valid @RequestBody PersonEntity personEntity){
         boolean success = userService.createPerson(personEntity);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        return success ? ResponseEntity.status(HttpStatus.CREATED).build() : ResponseEntity.status(HttpStatus.CONFLICT).build();
     }
 
     @PostMapping(value = "/login", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)

@@ -65,10 +65,6 @@ After all the steps are complete the application will be ready for usage
 
 **Code** : `200 OK`
 
-## Ivalid credentials 
-
-**Code** : `401 Unauthorized`
-
 ## Non valid email or blank password 
 
 **Code** : `400 Bad Request`
@@ -80,7 +76,7 @@ After all the steps are complete the application will be ready for usage
 
 **HTTP Method** : `POST`
 
-**Auth required** : Email and password Credentials
+**Auth required** : Email and password in body
 
 **Body** :
 ```json
@@ -104,7 +100,6 @@ After all the steps are complete the application will be ready for usage
 # Sample blog requests and responses 
 
 # Create blog entry
-
 
 **URL** : `/entries`
 
@@ -131,14 +126,13 @@ After all the steps are complete the application will be ready for usage
 
 **Code** : `400 Bad Request`
 
-# Get user all  blog entries
+# Get user all blog entries
 
 **URL** : `/entries`
 
 **HTTP Method** : `GET`
 
 **Auth required** : JWT Token in authorization header e.g. ``` Authorization: Bearer {JWT_TOKEN} ```
-
 
 ## Success Response
 

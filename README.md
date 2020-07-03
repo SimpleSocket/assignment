@@ -89,6 +89,10 @@ After all the steps are complete the application will be ready for usage
 
 **Code** : `200 OK`
 
+```json
+"jwt" : "{JWT_TOKEN}"
+```
+
 ## Ivalid credentials 
 
 **Code** : `401 Unauthorized`

@@ -4,11 +4,13 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Objects;
 
 @Entity
 @Table(name = "entry", schema = "blog", catalog = "")
 public class EntryEntity {
+    @NotBlank
     private String tittle;
     private String text;
     private Integer idEntry;
